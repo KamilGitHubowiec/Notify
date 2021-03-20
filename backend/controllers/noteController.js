@@ -39,7 +39,7 @@ const getNoteHistory = asyncHandler(async (request, response) => {
 const addNote = asyncHandler(async (request, response) => {
   const { title, content } = request.body;
 
-  if (title.trim() === "" || content.trim() === "") {
+  if (title === "" || content === "") {
     response.status(404);
     throw new Error("Please fill required field");
   } else {

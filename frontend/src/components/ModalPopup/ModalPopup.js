@@ -59,15 +59,16 @@ const ModalPopup = ({ match }) => {
   const renderPopupContent = () => {
     return (
       <div className={styles.popup_content}>
+        <h1>Note</h1>
         <form onSubmit={(e) => handleSubmit(e)}>
           <input onChange={(e) => handleChange(e)} type="text" value={note.title} name="title" disabled={editingIsDisabled}/>
           <input onChange={(e) => handleChange(e)} type="textarea" value={note.content} name="content" disabled={editingIsDisabled}/>
-          <span>{note.createdAt && formatDateToDayMonthYearTime(note.createdAt)}</span>
-          <span>{note.updatedAt && formatDateToDayMonthYearTime(note.updatedAt)}</span>
+          <span>Created: {note.createdAt && formatDateToDayMonthYearTime(note.createdAt)}</span>
+          <span>Updated: {note.updatedAt && formatDateToDayMonthYearTime(note.updatedAt)}</span>
           <button type="submit">Save Changes</button>
-          <button onClick={() => getHistoryOfChanges(note._id)}>Get history of changes</button>
         </form>
-        <button onClick={() => handleEditState()}>Edit</button>
+        <button onClick={() => handleEditState()} className={styles.button_edit}>Edit</button>
+        <button onClick={() => getHistoryOfChanges(note._id)} className={styles.button_history}>Get history of changes</button>
       </div>
     )
   }

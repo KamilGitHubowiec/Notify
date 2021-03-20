@@ -18,9 +18,45 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 50rem;
-    width: 50rem;
+    min-width: 40rem;
+    padding: 2rem;
+    border: 1px solid $color-primary;
     background-color: #fff;
+
+    h1 {
+      margin-bottom: 2rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      font-size: 1.3rem;
+      
+      input, span {
+        margin-bottom: 1rem;
+        padding: 1rem;
+      }
+
+      input[type=textarea] {
+        word-wrap: break-word;
+      }
+    }
+
+    button {
+      width: 100%;
+      padding: 1rem;
+      margin-top: 1rem;
+      background-color: $color-secondary;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all .1s ease;
+
+      &:hover {
+        background-color: $color-primary;
+        color: #fff;
+      }
+    }
   }
 }
 

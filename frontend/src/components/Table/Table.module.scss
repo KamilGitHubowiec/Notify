@@ -1,18 +1,26 @@
 @import "../../variables.scss";
 
 .table_container {
-  width: 50%;
-  margin: auto;
+  width: 100%;
   background-color: #fff;
 
   table {
     width: 100%;
     border-collapse: collapse;
+    border-bottom: 2px solid $color-primary;
 
     thead {
       background-color: $color-primary;
       color: $color-font-light;
     }
+
+    tr {
+      border-bottom: 1px solid $color-tetiary;
+    }
+
+    th {
+      padding: 1rem 0.2rem ;
+    }    
 
     tbody {
       .note_title {
@@ -22,6 +30,18 @@
       .button_delete {
         color: $color-secondary;
         cursor: pointer;
+
+        &:hover {
+          color: #c48534;
+        }
+      }
+
+      tr {
+        transition: all 0.1s ease;
+
+        &:hover {
+          background-color: $color-tetiary;
+        }
       }
     }
   }

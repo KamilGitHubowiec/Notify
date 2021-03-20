@@ -1,0 +1,40 @@
+@import "../../variables.scss";
+
+.add_note_form {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 2rem;
+
+  @include respond(phone) {
+    flex-direction: column;
+  }  
+
+  label {
+    font-size: 1.5rem;
+  }
+
+  input {
+    padding: 1rem;
+    margin-left: 1rem;
+
+    @include respond(phone) {
+      width: 100%;
+      margin: 0;
+      margin-bottom: 1rem;
+    }  
+  }
+
+  button[type=submit] {
+    padding: 1rem;
+    background-color: $color-secondary;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background-color: $color-primary;
+      color: #fff;
+    }
+  }
+}

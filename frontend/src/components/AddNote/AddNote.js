@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styles from "./AddNote.module.scss";
 import { useDispatch } from "react-redux";
 import { createNoteAction } from "../../redux/actions/noteActions";
 
@@ -19,9 +20,15 @@ const AddNote = () => {
   }
 
   return (
-    <form onSubmit={(e) => handleSubmit(e)}>
-      <input onChange={(e) => handleChange(e)} type="text" name="title" value={note.title} />
-      <input onChange={(e) => handleChange(e)} type="textarea" name="content" value={note.content} />
+    <form onSubmit={(e) => handleSubmit(e)} className={styles.add_note_form} >
+      <div>
+        <label for="note-title">Title</label>
+        <input onChange={(e) => handleChange(e)} type="text" name="title" id="note-title" value={note.title} />
+      </div>
+      <div>
+        <label for="note-content">Content</label>
+        <input onChange={(e) => handleChange(e)} type="textarea" name="content" id="note-content" value={note.content} />
+      </div>
       <button type="submit">Add note</button>
     </form>
   )
