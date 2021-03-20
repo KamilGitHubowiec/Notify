@@ -1,0 +1,28 @@
+@import "../../variables.scss";
+
+.table_container {
+  width: 50%;
+  margin: auto;
+  background-color: #fff;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+    thead {
+      background-color: $color-primary;
+      color: $color-font-light;
+    }
+
+    tbody {
+      .note_title {
+        cursor: pointer;
+      }
+
+      .button_delete {
+        color: $color-secondary;
+        cursor: pointer;
+      }
+    }
+  }
+}
