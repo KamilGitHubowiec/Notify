@@ -11,13 +11,18 @@
 
 # Available Scripts
 
-In the project root directory, you can run:
-1. npm run server - to run server alone
-2. npm run client - to run client alone
-3. npm run dev - to run client with server simulteanosuly
-4. npm run test - to run tests using in memory mongo database
+## In the project root directory, you can run:
 
-In the fronted directory, you can run:
+### 'npm run server' 
+  to run server alone
+### 'npm run client'
+  to run client alone
+### 'npm run dev' 
+  to run client with server simulteanosuly
+### 'npm run test' 
+  to run tests using in memory mongo database
+
+## In the fronted directory, you can run:
 1. npm run test - to run test for the frontend 
 
 
@@ -30,13 +35,6 @@ In the fronted directory, you can run:
 
 
 
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
 
 ### `npm start`
 
