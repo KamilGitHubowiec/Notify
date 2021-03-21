@@ -9,17 +9,17 @@
 4. Go to **Network Access** tab and Add IP Address (choose option *Allow access from anywhere*)
 5. Go back to **Clusters** tab and click CONNECT -> Connect using MongoDB Compass -> select I have MongoDB Compass and copy the connection string 
 6. Open up Compass App that you downloaded and in New Connection tab pass the connection string that should look like this
-MONGO_URI=mongodb+srv://<user>:<password>@<databaseName>.sxiup.mongodb.net/test
-as <user> you want to pass name of the user you created in step 3 and instead of <password> pass its password, you will also need to add the name of database you created instead of <databaseName> (get rid of <> tags)
+MONGO_URI=mongodb+srv://**user**:**password**@**databaseName**.sxiup.mongodb.net/test
+as **use** you want to pass name of the user you created in step 3 and instead of **password** pass its password, you will also need to add the name of database you created instead of **databaseName**
 8. Click Connect
 9. Go to MongoDb website https://account.mongodb.com/account/login -> Go to Clusters -> Click CONNECT -> Connect your application and copy connection string
 10. Create .env file in root directory with following variables (as MONGO_URI you want to pass you connection string with your data):
 NODE_ENV=development
 PORT=5000
-MONGO_URI=mongodb+srv://<user>:<password>@<databaseName>.sxiup.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+MONGO_URI=mongodb+srv://**user**:**password**@**databaseName**.sxiup.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 11. Go to root directory and type: npm install
 12. Go to frontend directory and type: npm install
-13. Go to root directory in command line and type **npm run dev** script
+13. Go to root directory in command line and type **npm run dev**
 
 ## Available Scripts
 ## In the project root directory, you can run:
