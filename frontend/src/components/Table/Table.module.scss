@@ -36,6 +36,10 @@
         }
       }
 
+      tr:nth-child(2n) {
+        background-color: rgb(250, 246, 246);
+      }
+      
       tr {
         transition: all 0.1s ease;
 
