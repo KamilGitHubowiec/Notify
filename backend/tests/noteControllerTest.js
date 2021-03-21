@@ -7,7 +7,7 @@ module.exports.getNotes = asyncHandler(async (req, res) => {
 })
 
 module.exports.addNote = asyncHandler(async (req, res) => {
-  const data = await Note.create(req);
+  const data = await Note.create(req.body);
   res.json(data);
 })
 

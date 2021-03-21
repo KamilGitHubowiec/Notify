@@ -35,6 +35,11 @@ MONGO_URI=mongodb+srv://**user**:**password**@**databaseName**.sxiup.mongodb.net
 
 ### 'npm run test' 
   to run rest api tests using in memory mongo database
+  
+  **I ran into some bugs when creating tests and was not able to deliever them working in time**
+  **First bug was that I could not set up ES6 modules in tests, so I had to create separate files for server and routes using ES5**
+  **even then, they were not running correctly**
+  **However I am leaving code I created in tests directory**
 
 # D. Example usages (i.e., like example curl commands to CRUD the notes)
 
@@ -58,8 +63,9 @@ Get note by id (to make it work, first post new note then in the place of id pas
 ### curl -X PATCH http://localhost:3000/notes/id --data "{\"title\":\"test Updated\", \"content\":\"test Updated\", \"noteToBeArchived\":{\"title\": \"archived Note\", \"content\": \"archived Note\"}}" --header "Content-type: application/json"
 Update existing note by passing id, new data and note that should be archived (same as getting note by id, work on the created one)
 
-### curl -X DELETE http://localhost:3000/notes/6057af077724b12c406c2d58 
+### curl -X DELETE http://localhost:3000/notes/id 
 Delete existing note by passing id
 
-### curl -X GET http://localhost:3000/notes/history/6057af077724b12c406c2d58
+### curl -X GET http://localhost:3000/notes/history/id
 Get history of the chosen note by passing an id
+

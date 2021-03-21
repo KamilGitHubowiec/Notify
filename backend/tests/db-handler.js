@@ -7,7 +7,7 @@ const mongoMemoryServer = new MongoMemoryServer();
 module.exports.connect = async () => {
     await mongoose.disconnect();
     
-    const uri = await mongoMemoryServer.getConnectionString();
+    const uri = await mongoMemoryServer.getUri();
 
     const mongooseOpts = {
         useNewUrlParser: true,
